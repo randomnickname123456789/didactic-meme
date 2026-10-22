@@ -20,3 +20,5 @@ produktion => det som är live "mot användare"
 6. merge
 7. pull för att få den senaste koden
 8. upprepa detta X antal gånger
+
+test test
