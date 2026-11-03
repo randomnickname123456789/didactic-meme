@@ -1,0 +1,112 @@
+$color-primary: #0e32e5;
+$color-white: #fff;
+
+$btn-border-radius: 4px;
+
+.btn {
+  display: inline-block;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: $btn-border-radius;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  color: $color-white;
+  background-color: $color-primary;
+  border: 2px solid $color-primary;
+
+  &:hover {
+    color: $color-white;
+    background-color: #6d28d9;
+    border: 2px solid #6d28d9;
+  }
+
+  &:focus {
+    outline: 5px solid $color-primary;
+    outline-offset: 2px;
+    background-color: yellow;
+    color: black;
+  }
+
+  &:active {
+    background-color: red;
+  }
+}
+
+.btn-secondary {
+  padding: 12px 24px;
+  color: $color-primary;
+  background-color: $color-white;
+  border: 2px solid $color-primary;
+  border-radius: $btn-border-radius;
+}
+
+.btn-warning {
+  padding: 12px 24px;
+  color: $color-white;
+  background-color: #b45309;
+  border: 2px solid $color-white;
+  border-radius: $btn-border-radius;
+}
+
+.btn-secondary:hover {
+  color: $color-white;
+  background-color: $color-primary;
+  border: 2px solid $color-primary;
+}
+
+.btn-secondary:focus {
+  outline: 3px solid $color-primary;
+  outline-offset: 2px;
+}
+
+.btn-success {
+  padding: 12px 24px;
+  color: $color-white;
+  background-color: #15803d;
+  border: 2px solid #15803d;
+  border-radius: 4px;
+}
+
+.btn-success:hover {
+  color: $color-white;
+  background-color: #166534;
+  border: 2px solid #166534;
+}
+
+.btn-success:focus {
+  outline: 3px solid #15803d;
+  outline-offset: 2px;
+}
+
+.btn-danger {
+  padding: 12px 24px;
+  color: $color-white;
+  background-color: #dc2626;
+  border: 2px solid #dc2626;
+  border-radius: 5px;
+}
+
+.btn-danger:hover {
+  color: $color-white;
+  background-color: #b91c1c;
+  border: 2px solid #b91c1c;
+}
+
+.btn-danger:focus {
+  outline: 3px solid #dc2626;
+  outline-offset: 2px;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: $color-white;
+  background-color: $color-primary;
+  border: 2px solid $color-primary;
+  border-radius: 4px;
+}

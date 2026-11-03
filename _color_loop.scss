@@ -1,0 +1,41 @@
+@use "sass:list";
+@use "sass:color";
+
+.color-loop {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  $warm-hues: #fef3c7, #fde68a, #fcd34d, #fdba74, #fb923c;
+  $blue-hues: #1741d8, #46d61f, #ac136a, #0b26c1, #bce508;
+
+  $orange: #ff0051;
+
+  article {
+    border: 3px solid black;
+    padding: 16px;
+
+    @for $i from 1 through list.length($warm-hues) {
+      &:nth-child(#{$i}) {
+        // background-color: list.nth($warm-hues, $i);
+        background-color: color.scale($orange, $lightness: ($i - 1) * -20%);
+        color: list.nth($blue-hues, $i);
+      }
+    }
+  }
+
+/*   article:nth-child(1) {
+    background-color: #fef3c7;
+  }
+  article:nth-child(2) {
+    background-color: #fde68a;
+  }
+  article:nth-child(3) {
+    background-color: #fcd34d;
+  }
+  article:nth-child(4) {
+    background-color: #fdba74;
+  }
+  article:nth-child(5) {
+    background-color: #fb923c;
+  } */
+}
