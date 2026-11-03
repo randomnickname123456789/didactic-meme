@@ -1,0 +1,228 @@
+/* ==========================================================
+   AutoBot – starter styles
+   This is plain CSS saved as .scss (all CSS is valid SCSS).
+
+   YOUR TASKS:
+   1. The client wants a new brand color: change the blue
+      to purple ($primary-color) everywhere. How long does it take?
+      Did you miss any?
+   2. Add a new button: .btn-warning (orange, #b45309).
+   3. Make all buttons a bit rounder (border-radius: 8px).
+   ========================================================== */
+
+@use "buttons";
+@use "color_loop";
+
+$color-primary: #0e32e5;
+$color-white: #fff;
+
+$btn-border-radius: 4px;
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+h1 {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 48px;
+  color: #1f2937;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  color: #1f2937;
+  margin: 0 0 24px;
+}
+
+h3 {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: $color-primary;
+  margin: 0 0 8px;
+}
+
+a {
+  color: $color-primary;
+}
+
+a:hover {
+  color: #6d28d9;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background-color: $color-white;
+  border-bottom: 4px solid $color-primary;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: $color-primary;
+  text-decoration: none;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  color: $color-primary;
+  text-decoration: underline;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 64px 32px;
+  text-align: center;
+  background-color: transparentize($color-primary, 0.9);
+  border-bottom: 1px solid $color-primary;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+/* ---------- Cards ---------- */
+
+.features {
+  padding: 64px 32px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 24px;
+  background-color: $color-white;
+  border: 1px solid #e5e7eb;
+  border-top: 4px solid $color-primary;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+  margin: 0 0 24px;
+}
+
+/* ---------- Alerts ---------- */
+
+.alerts {
+  padding: 0 32px 64px;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.alert p {
+  margin: 0;
+}
+
+.alert-success {
+  color: #166534;
+  background-color: #f0fdf4;
+  border: 1px solid #15803d;
+  border-left: 6px solid #15803d;
+}
+
+.alert-danger {
+  color: #b91c1c;
+  background-color: #fef2f2;
+  border: 1px solid #dc2626;
+  border-left: 6px solid #dc2626;
+}
+
+/* ---------- Newsletter ---------- */
+
+.newsletter {
+  padding: 64px 32px;
+  background-color: transparentize($color-primary, .8);
+  border-top: 1px solid $color-primary;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.newsletter-form label {
+  font-weight: bold;
+  width: 100%;
+}
+
+.newsletter-form input {
+  padding: 12px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  border: 2px solid #9ca3af;
+  border-radius: 4px;
+}
+
+.newsletter-form input:focus {
+  border-color: $color-primary;
+  outline: 3px solid $color-primary;
+  outline-offset: 2px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 32px;
+  color: $color-white;
+  background-color: #1f2937;
+  border-top: 4px solid $color-primary;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: $color-white;
+}
+
+.site-footer a:hover {
+  color: #c4b5fd;
+}
